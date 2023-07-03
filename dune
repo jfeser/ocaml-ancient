@@ -1,11 +1,12 @@
 (data_only_dirs mmalloc)
 
 (library
- (name ancient)
+ (public_name ancient)
  (modules ancient)
  (foreign_stubs (language c) (names ancient_c) (flags -Immalloc))
  (foreign_archives mmalloc)
- (libraries unix))
+ (libraries unix)
+ (modes native))
 
 (rule
  (deps (source_tree mmalloc))
