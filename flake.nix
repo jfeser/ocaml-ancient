@@ -21,7 +21,7 @@
           overlays = [ overlay ];
         };
       in {
-        overlay.default = overlay;
+        overlays.default = overlay;
         defaultPackage = pkgs.ocamlPackages.ancient;
         devShell = pkgs.mkShell {
           nativeBuildInputs =
